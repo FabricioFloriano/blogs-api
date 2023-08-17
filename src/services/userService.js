@@ -8,7 +8,7 @@ const signUp = async (displayName, email, password, image) => {
         if (image) {
             UserCreated = { displayName, email, password, image };
         }
-
+       
         await User.create(UserCreated);
 
         const token = jwt.sign(email, process.env.JWT_SECRET, { algorithm: 'HS256' });
