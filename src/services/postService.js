@@ -61,9 +61,7 @@ const getPostsById = async (id) => {
             },
         ],
     });
-
     if (!post) return { message: 'Post does not exist' };
-
     return post;
 };
 
