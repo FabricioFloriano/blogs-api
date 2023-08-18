@@ -7,5 +7,6 @@ const validateToken = require('../middlawares/validateToken');
 userRouter.post('/', validateDisplayName, validateEmailAndPass, userController.signUp);
 userRouter.get('/', validateToken, userController.getUsers);
 userRouter.get('/:id', validateToken, userController.getUserById);
+userRouter.delete('/me', validateToken, userController.removeUser);
 
 module.exports = userRouter;

@@ -18,9 +18,15 @@ const getUserById = async (req, res) => {
     if (result.message) return res.status(404).json({ message: result.message });
     return res.status(200).json(result);
 };
+const removeUser = async (req, res) => {
+    const result = await userService.removeUser(req.user);
+    if (result && result.message) return res.status(404).json({ message: result.message });
+    return res.status(204).end();
+};
 
 module.exports = { 
     signUp,
+    removeUser,
     getUsers,
     getUserById,
  };

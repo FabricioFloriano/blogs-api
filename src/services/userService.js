@@ -28,8 +28,15 @@ const getUserById = async (id) => {
     if (!user) return { message: 'User does not exist' };
     return user; 
 };
+const removeUser = async (id) => {
+    const user = await User.findByPk(id);
+    console.log('AQUI QUE ESTá O LOG ', user);
+    if (!user) return { message: 'User does not exist' };
+    await User.destroy({ where: { id } });
+};
 
 module.exports = { 
+    removeUser,
     signUp,
     getUsers,
     getUserById,
