@@ -8,7 +8,12 @@ const signIn = async (email, password) => {
      message: 'Invalid fields',
     };
   }
-  const token = jwt.sign(email, process.env.JWT_SECRET, { algorithm: 'HS256' });
+  const token = jwt.sign(
+    { email, id: user.dataValues.id },
+             process.env.JWT_SECRET,
+    
+    { algorithm: 'HS256' },
+    );
   return token;
 };
 
