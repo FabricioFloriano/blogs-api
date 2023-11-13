@@ -1,4 +1,4 @@
-# Boas-vindas ao repositório do projeto API de Blogs!
+# Boas-vindas ao repositório do projeto Blogs API!
 #### _by [Fabricio Floriano](https://www.linkedin.com/in/faflorian0/)_
 
 ## Sobre
